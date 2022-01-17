@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 body {
     font: normal 16px arial;
     background: rgb(94, 145, 161);
@@ -17,6 +18,18 @@ section {
     padding: 15px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#botao {
+    margin-top: 10px;
+    max-width: 150px;
+    
 }
 
 footer {
