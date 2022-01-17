@@ -31,6 +31,6 @@ function calcular () {
         
         res.innerHTML = `Olá, ${nome}, seu IMC é ${valorIMC} e você está ${classificacao}.`
     } else {
-        res.innerText = 'Preencha todos os campos!!'
+        alert('Preencha todos os campos!!') 
     }
 } 
