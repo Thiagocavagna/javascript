@@ -39,14 +39,48 @@ function adicionar(){
         sel.appendChild(item)
         numero.push(n)
         numero.sort()
-        res.innerHTML= '<p id="res1"></p> <p id="res2"></p> <p id="res3"></p><p id="res4"></p><p id="res5"></p>'
+        res.innerHTML= ''
     }else {
         alert('Esse número já foi adicionado na lista.')        
         
     }
+    txtn.value = '' //limpar campo
+    txtn.focus() //foco no input após
         
 }
 
+
+function finalizar(){
+    let res = document.getElementById('res')
+    let min = Math.min(...numero)
+    let max = Math.max(...numero)
+   
+
+    if (sel.length == 0) {
+        alert('Adicione um número por favor.')
+    } else {
+        res.innerHTML = `<p>Ao todo temos ${numero.length} números cadastrados.</p>`
+        res.innerHTML += `<p>O maior valor informado foi ${max}.</p>`
+        res.innerHTML += `<p>O menor valor informado foi ${min}.</p>`
+        res.innerHTML += `<p>Somando todos os valores, temos ${soma(numero)}.</p>`
+        res.innerHTML += `<p>A média dos valores digitados é ${media(numero)}.</p>`
+}
+      
+}
+
+
+
+
+/*let soma = 0
+
+    for(c = 0; c < numero.length; c++) {
+        soma = soma + numero[c] 
+    }
+
+    function limpar (){
+    res.innerHTML= '<p id="res1"></p> <p id="res2"></p> <p id="res3"></p><p id="res4"></p><p id="res5"></p>'
+    limpa(sel)
+}
 
 function finalizar(){
     let res = [document.getElementById('res1'), document.getElementById('res2'), document.getElementById('res3'), document.getElementById('res4'), document.getElementById('res5')]
@@ -67,18 +101,5 @@ function finalizar(){
     
 }
 
-
-
-
-/*let soma = 0
-
-    for(c = 0; c < numero.length; c++) {
-        soma = soma + numero[c] 
-    }
-
-    function limpar (){
-    res.innerHTML= '<p id="res1"></p> <p id="res2"></p> <p id="res3"></p><p id="res4"></p><p id="res5"></p>'
-    limpa(sel)
-}
 
     */
