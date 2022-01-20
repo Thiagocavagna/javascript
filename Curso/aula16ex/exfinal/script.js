@@ -1,3 +1,4 @@
+
 var txtn = document.getElementById('txtn')
 var sel = document.getElementById('sel')
 //var n = Number(txtn.value)
@@ -21,23 +22,29 @@ function media(n){
     return media
 }
 
+function limpa (n){
+    n.innerHTML = ''
+}
+
 //Function sem parametros
 
 function adicionar(){
     let n = Number(txtn.value)
 
-
     if (n < 1 || n > 100) {
         alert('Preencha um número válido!')
-    } else {
+    } else if (numero.indexOf(n) == '-1') {
         let item = document.createElement('option')
         item.text = `Valor ${n} adicionado.`
         sel.appendChild(item)
         numero.push(n)
         numero.sort()
- 
+        res.innerHTML= '<p id="res1"></p> <p id="res2"></p> <p id="res3"></p><p id="res4"></p><p id="res5"></p>'
+    }else {
+        alert('Esse número já foi adicionado na lista.')        
+        
     }
-    
+        
 }
 
 
@@ -60,10 +67,6 @@ function finalizar(){
     
 }
 
-function limpar (){
-    sel.innerHTML = ''
-    res.innerHTML = ''
-}
 
 
 
@@ -72,4 +75,10 @@ function limpar (){
     for(c = 0; c < numero.length; c++) {
         soma = soma + numero[c] 
     }
+
+    function limpar (){
+    res.innerHTML= '<p id="res1"></p> <p id="res2"></p> <p id="res3"></p><p id="res4"></p><p id="res5"></p>'
+    limpa(sel)
+}
+
     */
