@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Calculadora</h1>
+        <form class="calculadora">
+            <div class="btn1">
+                <input type="text" id="resultado" disabled>
+                <input class="limpa" type="button" value="C" onclick="location.reload()">
+            </div>
+
+            <div class="btnf">
+                <input class="botao" type="button" value="7" name="btn7" onclick="calcular(btn7.value)">
+                <input class="botao" type="button" value="8" name="btn8" onclick="calcular(btn8.value)">
+                <input class="botao" type="button" value="9" name="btn9" onclick="calcular(btn9.value)">
+                <input class="botao" type="button" value="/" name="divbtn" onclick="calcular(divbtn.value)">
+            </div>
+            <div class="btnf">
+                <input class="botao" type="button" value="4" name="btn4" onclick="calcular(btn4.value)">
+                <input class="botao" type="button" value="5" name="btn5" onclick="calcular(btn5.value)">
+                <input class="botao" type="button" value="6" name="btn6" onclick="calcular(btn6.value)">
+                <input class="botao" type="button" value="*" name="mulbtn" onclick="calcular(mulbtn.value)">
+            </div>
+            <div class="btnf">
+                <input class="botao" type="button" value="1" name="btn1"onclick="calcular(btn1.value)">
+                <input class="botao" type="button" value="2" name="btn2"onclick="calcular(btn2.value)">
+                <input class="botao" type="button" value="3" name="btn3"onclick="calcular(btn3.value)">
+                <input class="botao" type="button" value="-" name="subbtn"onclick="calcular(subbtn.value)">
+            </div>
+            <div class="btnf">
+                <input class="botao" type="button" value="0" name="btn0"onclick="calcular(btn0.value)">
+                <input class="botao" type="button" value="." name="pontobtn"onclick="calcular(pontobtn.value)">
+                <input class="botao" type="button" value="=" name="igualbtn"onclick="resultado.value=eval(resultado.value)"> <!--eval faz cálculo aritmético de uma string-->
+                <input class="botao" type="button" value="+" name="adbtn" onclick="calcular(adbtn.value)">
+            </div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
