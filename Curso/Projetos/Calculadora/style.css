@@ -15,6 +15,14 @@ main {
     gap: 10px
     ;
     height: 100vh;
+    background-image: linear-gradient(to right, rgb(19, 22, 68), rgb(36, 40, 97), rgb(59, 65, 151))
+}
+
+main h1 {
+    background-color: rgba(0, 0, 0, 0.384);
+    padding: 0px 50px;
+    color: white;
+    border-radius: 5px;
 }
 
 .calculadora {
@@ -33,12 +41,14 @@ main {
 
 .btn1 {
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    align-items: center;
 }
 
 .btn1 #resultado {
-    max-width: 200px;
-    padding: 5px;
+    min-width: 180px;
+    max-width: 250px;
+    padding: 10px 5px;
     margin-bottom: 10px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.301);
 
@@ -50,4 +60,17 @@ main {
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.377);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.301);
+    font-size: 1.1em;
+    font-weight: bold;
+    
+}
+
+.botao {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: rgba(65, 67, 187, 0.74);
+    color: white;
 }
