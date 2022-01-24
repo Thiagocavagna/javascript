@@ -11,7 +11,7 @@ function calcular() {
     let basal = {homem: (9.99 * peso.value) + (6.25 * altura.value) - (4.92* idade.value) + 5, mulher:(9.99 * peso.value) + (6.25 * altura.value) - (4.92* idade.value) - 161}
     let diario = {fem: basal.mulher * atividade, masc: basal.homem * atividade}
 
-    
+    let valorIMC = peso.value / ((altura.value / 100)* (altura.value / 100).toFixed(2))
     
 
 
@@ -44,8 +44,26 @@ function calcular() {
                 res.innerHTML += `<p>Para ganhar peso rapidamente, você precisa consumir <strong>${(diario.masc * 1.2).toFixed(0)}</strong> kcal por dia.`
             }
         } 
+
+        if (valorIMC < 17) {
+            res.innerHTML += `Seu IMC é de <strong>${valorIMC.toFixed(2)}</strong> e você está <strong>muito abaixo do peso</strong>`
+        } else if (valorIMC < 18.5) {
+            res.innerHTML += `Seu IMC é de <strong>${valorIMC.toFixed(2)}</strong> e você está <strong>abaixo do peso</strong>`
+        } else if (valorIMC < 25) {
+            res.innerHTML += `Seu IMC é de <strong>${valorIMC.toFixed(2)}</strong> e você está no <strong>peso normal</strong>`
+        } else if (valorIMC < 30) {
+            res.innerHTML += `Seu IMC é de <strong>${valorIMC.toFixed(2)}</strong> e você está <strong>acima do peso</strong>`
+        } else if (valorIMC < 35) {
+            res.innerHTML += `Seu IMC é de <strong>${valorIMC.toFixed(2)}</strong> e você está com <strong>Obesidade grau I</strong>`
+        } else if (valorIMC < 40) {
+            res.innerHTML += `Seu IMC é de <strong>${valorIMC.toFixed(2)}</strong> e você está com <strong>Obesidade grau II</strong>`
+        } else {
+            res.innerHTML += `Seu IMC é de <strong>${valorIMC.toFixed(2)}</strong> e você está com <strong>Obesidade grau III</strong>`
+        }
+    
     } 
 
+    
 
 /*
 
