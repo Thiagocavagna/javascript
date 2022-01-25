@@ -22,7 +22,7 @@ function calcular() {
         if (objetivo.value == 'emagrecer-rapido') {
             res.innerHTML += `<p>Para emagrecer rapidamente, você precisa consumir <strong>${(diario.fem * 0.80).toFixed(0)}</strong> kcal por dia.</p>`
         } else if (objetivo.value == 'emagrecer') {
-            res.innerHTML += `<p>Para emagrecer rapidamente, você precisa consumir <strong>${(diario.fem * 0.90).toFixed(0)}</strong> kcal por dia.</p>`
+            res.innerHTML += `<p>Para emagrecer, você precisa consumir <strong>${(diario.fem * 0.90).toFixed(0)}</strong> kcal por dia.</p>`
         } else if (objetivo.value == 'manter') {
             res.innerHTML += `<p>Para manter o seu peso atual, você precisa consumir <strong>${diario.fem.toFixed(0)}</strong> kcal por dia.</p>`
         } else if (objetivo.value == 'ganhar') {
