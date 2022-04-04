@@ -6,11 +6,12 @@
     text-decoration: 0;
     font-family: Arial, Helvetica, sans-serif;
     list-style: 0;
+    color: white;
 }
 
 body {
-    background-color: rgb(196, 234, 247);
-
+    background-image: linear-gradient(to right, #265C4B,#007566, #589A8D);
+    
 }
 
 .principal {
@@ -28,6 +29,7 @@ body {
     border: 1px solid black;
     padding: 40px 30px;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .subconteudo1, .subconteudo2 {
@@ -36,6 +38,7 @@ body {
     align-items: flex-start;
     gap: 10px;
 }
+
 
 input {
     padding: 6px 0px;
@@ -48,5 +51,6 @@ input {
     margin-top: 10px;
     padding: 5px 10px;
     border: 1px solid black;
-    border-radius: 5px
+    border-radius: 5px;
+    color: black;
 }
